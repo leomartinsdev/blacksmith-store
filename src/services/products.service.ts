@@ -8,6 +8,7 @@ import { ServiceResponse } from '../types/ServiceResponse';
 async function findAll(): Promise<ServiceResponse<Product[]>> {
   const products = await ProductModel.findAll();
   const productsJson = products.map((product) => product.toJSON());
+
   return { status: 'SUCCESSFUL', data: productsJson };
 }
 
