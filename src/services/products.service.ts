@@ -3,7 +3,13 @@ import ProductModel, {
 } from '../database/models/product.model';
 
 import { Product, ProductNoId } from '../types/Product';
-import { ServiceResponse } from '../types/ServiceResponse'; 
+import { ServiceResponse } from '../types/ServiceResponse';
+
+async function findAll(): Promise<ServiceResponse<Product[]>> {
+  const products = await ProductModel.findAll();
+  const productsJson = products.map((product) => product.toJSON());
+  return { status: 'SUCCESSFUL', data: productsJson };
+}
 
 async function create(product: ProductInputtableTypes):
 Promise<ServiceResponse<Product | ProductNoId>> {
@@ -17,4 +23,5 @@ Promise<ServiceResponse<Product | ProductNoId>> {
 
 export default {
   create,
+  findAll,
 };
