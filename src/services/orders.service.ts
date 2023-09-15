@@ -16,7 +16,6 @@ async function findAll(): Promise<ServiceResponse<Order[]>> {
   const ordersJSON = orders.map((order) => order.toJSON()); // Isso me gera um array com todas as ordens.
 
   const ordersArr = ordersJSON.map((order) => { // Aqui, cada order é um elemento com suas próprias propriedades.
-    console.log('---> ORDER:', order);
     const productIds = order.productIds?.map((productId) => { // Aqui, cada elemento é um productId.
       const productIdsArr = typeof productId === 'object' ? productId.id : productId;
       return productIdsArr;
