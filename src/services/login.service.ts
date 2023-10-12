@@ -7,7 +7,7 @@ import { Login } from '../types/Login';
 
 async function verifyLogin(login: Login): Promise<ServiceResponse<Token>> {
   if (!login.username || !login.password) {
-    return { status: 'INVALID_VALUE', data: { message: '"username" and "password" are required' } };
+    return { status: 'BAD_REQUEST', data: { message: '"username" and "password" are required' } };
   }
 
   const foundUser = await UserModel.findOne({ where: { username: login.username } });

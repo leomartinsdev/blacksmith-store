@@ -63,7 +63,7 @@ describe('POST /login', function () {
     expect(httpResponse.body).to.be.deep.equal({ message: 'Username or password invalid' })
   })
 
-  it('Ao receber username existene e uma senha certa, retorne um token', async function () {
+  it('Ao receber username existente e uma senha certa, retorne um token', async function () {
     // Arrange
     const httpRequestBody = loginMock.validLoginBody;
     const mockFindOneReturn = UserModel.build(loginMock.existingUser);
