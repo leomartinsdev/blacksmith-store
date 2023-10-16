@@ -1,10 +1,11 @@
 # Blacksmith Store API ⚔️
 Projeto onde foi desenvolvido o back-end (no formato de uma RESTful API) de uma loja de itens medievais.
-<br>
-O projeto foi feito utilizando TypeScript, Express como framework para Node.js, Sequelize (ORM) e MySQL para administração do banco de dados.
+<br><br>
+O projeto foi feito utilizando TypeScript, Express como framework para Node.js, Sequelize (ORM) e MySQL para gerenciamento do banco de dados e dockerizado para fácil execução em qualquer máquina.
 
 ## Feito com 👨‍💻:
 - TypeScript
+- Docker
 - Sequelize
 - Express
 - MySQL
