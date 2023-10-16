@@ -8,6 +8,7 @@ O projeto foi feito utilizando TypeScript, Express como framework para Node.js, 
 - Docker
 - Sequelize
 - Express
+- Arquitetura em Camdas (MSC)
 - MySQL
 - JWT
 - bcrypt
